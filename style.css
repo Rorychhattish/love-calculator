@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #ffe0f0;
+    background-image: url("Love.png");  /*Hearts background*/
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;   /*Center horizontally*/
+    align-items: center;        /*Center vertically*/
+    height: 100vh;              /*Full heigh viewport*/
+}
+
+/*Main Container */
+.container{
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 350px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Title */
+h1{
+    font-size: 2rem;
+    color: #ff1493;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 20, 147, 0.6);
+}
+
+/* Input fields */
+.input-group input {
+    padding: 12px;
+    margin: 10px 0;
+    width: 100%;
+    border: 2px solid#ff1493;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #fff;
+    caret-color: #ff1493;       /* Pink typing cursor */
+    transition: 0.3s ease;
+}
+
+/* Placeholder color */
+.input-group input::placeholder {
+    color: #ff6aa6;
+    opacity: 1;
+}
+.input-group input:focus::placeholder {
+    color: #ffa3c4;             /* Lighter pink when focus */
+}
+
+/* Focus effects */
+.input-group input:focus {
+    border-color: #ff69b4;
+    background-color: #fff0f6;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 20, 147, 0.5);
+}
+
+/* Button */
+button {
+    padding: 12px 25px;
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 20, 147, 0.4);
+}
+
+button:hover {
+    background-color: #ff69b4;
+    transform: translateY(-2px);
+}
+
+.result {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #ff1493;
+    font-family: "comic sans MS", cursive;
+    text-shadow: 0 0 8px rgba(255, 105, 180, 0.6);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* History box */
+.history-box {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    max-height: 150px;
+    overflow-y: auto ;
+    font-size: 0.9rem;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+}
+
+.history-box h3 {
+    color: #ff1493;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px rgba(255, 20, 147, 0.4);
+}
+
+.history-box p {
+    margin: 40px 0;
+    border-bottom: 1px dashed #ffb6c1;
+    padding-bottom: 2px;
+    color: #ff1493;
+}
+
+/*Animations*/
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px);}
+    to { opacity: 1; transform: translateY(0);}
+}
